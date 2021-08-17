@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Car {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long idCar;
 
     @Column(name = "model")
@@ -16,7 +16,7 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @OneToOne(optional = false, mappedBy = "car")
+    @OneToOne(mappedBy = "car")
     private User user;
 
     public Car() {

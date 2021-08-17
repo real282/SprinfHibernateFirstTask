@@ -19,8 +19,8 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @OneToOne(optional = false, cascade = CascadeType.ALL)
-    @JoinColumn(name = "carId")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "car_idCar")
     private Car car;
 
     public User() {
