@@ -8,6 +8,7 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Id", nullable = false)
     private long idCar;
 
     @Column(name = "model")
